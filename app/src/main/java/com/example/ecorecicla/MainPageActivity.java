@@ -1,0 +1,43 @@
+package com.example.ecorecicla;
+
+import android.os.Bundle;
+import android.widget.Button;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+public class MainPageActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main_page);
+
+        Button homeButton = findViewById(R.id.homeButton);
+        Button categoriesButton = findViewById(R.id.categoriesButton);
+        Button statisticsButton = findViewById(R.id.statisticsButton);
+        Button logoutButton = findViewById(R.id.logoutButton);
+        Button benefitsButton = findViewById(R.id.benefitsButton);
+
+        // Lógica para los botones
+        homeButton.setOnClickListener(v -> {
+            // Acciones para el botón de Inicio
+        });
+
+        categoriesButton.setOnClickListener(v -> {
+            // Acciones para el botón de Categorías
+        });
+
+        statisticsButton.setOnClickListener(v -> {
+            // Acciones para el botón de Estadísticas
+        });
+
+        logoutButton.setOnClickListener(v -> {
+            // Acciones para el botón de Cerrar Sesión
+            finish();
+        });
+
+        benefitsButton.setOnClickListener(v -> {
+            // Acciones para el botón de Beneficios de Reciclar
+        });
+    }
+}

@@ -1,7 +1,5 @@
 package com.example.ecorecicla;
 
-import android.os.Bundle;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
@@ -9,32 +7,36 @@ import android.widget.EditText;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
-class MainActivity : AppCompatActivity() {
+public class MainActivity extends AppCompatActivity {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+    private EditText usernameEditText;
+    private EditText passwordEditText;
 
-        val usernameEditText = findViewById<EditText>(R.id.usernameEditText)
-                val passwordEditText = findViewById<EditText>(R.id.passwordEditText)
-                val loginButton = findViewById<Button>(R.id.loginButton)
-                val registerButton = findViewById<Button>(R.id.registerButton)
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
 
-                loginButton.setOnClickListener {
-            val username = usernameEditText.text.toString()
-            val password = passwordEditText.text.toString()
+        usernameEditText = findViewById(R.id.usernameEditText);
+        passwordEditText = findViewById(R.id.passwordEditText);
+        Button loginButton = findViewById(R.id.loginButton);
+        Button registerButton = findViewById(R.id.registerButton);
 
-            if (username.isNotEmpty() && password.isNotEmpty()) {
+        loginButton.setOnClickListener(v -> {
+            String username = usernameEditText.getText().toString();
+            String password = passwordEditText.getText().toString();
+
+            if (!username.isEmpty() && !password.isEmpty()) {
                 // Aquí podrías añadir lógica de autenticación
-                Toast.makeText(this, "Inicio de sesión exitoso", Toast.LENGTH_SHORT).show()
+                Toast.makeText(MainActivity.this, "Inicio de sesión exitoso", Toast.LENGTH_SHORT).show();
             } else {
-                Toast.makeText(this, "Por favor, ingrese todos los campos", Toast.LENGTH_SHORT).show()
+                Toast.makeText(MainActivity.this, "Por favor, ingrese todos los campos", Toast.LENGTH_SHORT).show();
             }
-        }
+        });
 
-        registerButton.setOnClickListener {
-            val intent = Intent(this, RegisterActivity::class.java)
-            startActivity(intent)
-        }
+        registerButton.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, RegisterActivity.class);
+            startActivity(intent);
+        });
     }
 }
