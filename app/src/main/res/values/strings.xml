@@ -13,4 +13,13 @@
     <string name="t_rminos_y_condiciones">Términos y Condiciones</string>
     <string name="aqu_van_los_t_rminos_y_condiciones">Aquí van los términos y condiciones...</string>
     <string name="aceptar_y_registrarse">Aceptar y registrarse</string>
+    <string name="registrar_material">Registrar material</string>
+    <string name="categor_as">Categorías</string>
+    <string name="papel">Papel</string>
+    <string name="vidrio">Vidrio</string>
+    <string name="pl_stico">Plástico</string>
+    <string name="an_lisis_de_las_personas_que_han_registrado_materiales_de_reciclaje">Análisis de las personas que han registrado materiales de reciclaje.</string>
+    <string name="hacer_seguimiento">Hacer Seguimiento</string>
+    <string name="n_mero_de_hojas_de_papel_recicladas">Número de hojas de papel recicladas</string>
+    <string name="pantalla_de_registro">Pantalla de registro</string>
 </resources>

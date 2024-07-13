@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        tools:ignore="HardcodedText">
+
+        <TextView
+            android:id="@+id/titleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pantalla_de_registro"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="45dp" />
+
+        <TextView
+            android:id="@+id/plasticLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Plástico"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:paddingTop="16dp" />
+
+        <TextView
+            android:id="@+id/plasticData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="TODO"
+            android:text="Datos de reciclaje Kilogramos de plástico"
+            android:paddingBottom="8dp" />
+
+        <!-- Placeholder for plastic graph -->
+        <ImageView
+            android:id="@+id/plasticGraph"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/graficaPlastico"
+            android:scaleType="fitCenter"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/paperLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Papel"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:paddingTop="16dp" />
+
+        <TextView
+            android:id="@+id/paperData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/n_mero_de_hojas_de_papel_recicladas"
+            android:paddingBottom="8dp" />
+
+        <!-- Placeholder for paper graph -->
+        <ImageView
+            android:id="@+id/paperGraph"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/graficaPapel"
+            android:scaleType="fitCenter"
+            tools:ignore="ContentDescription" />
+
+    </LinearLayout>
+</ScrollView>

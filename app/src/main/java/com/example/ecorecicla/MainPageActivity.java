@@ -1,5 +1,6 @@
 package com.example.ecorecicla;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 
@@ -18,23 +19,21 @@ public class MainPageActivity extends AppCompatActivity {
         Button logoutButton = findViewById(R.id.logoutButton);
         Button benefitsButton = findViewById(R.id.benefitsButton);
 
-        // Lógica para los botones
         homeButton.setOnClickListener(v -> {
-            // Acciones para el botón de Inicio
+            Intent intent = new Intent(MainPageActivity.this, MainPageActivity.class);
+            startActivity(intent);
         });
 
         categoriesButton.setOnClickListener(v -> {
-            // Acciones para el botón de Categorías
+            Intent intent = new Intent(MainPageActivity.this, CategoriesActivity.class);
+            startActivity(intent);
         });
 
         statisticsButton.setOnClickListener(v -> {
-            // Acciones para el botón de Estadísticas
+            // Acciones para el botón de Estadisticas de Reciclar
         });
 
-        logoutButton.setOnClickListener(v -> {
-            // Acciones para el botón de Cerrar Sesión
-            finish();
-        });
+        logoutButton.setOnClickListener(v -> finish());
 
         benefitsButton.setOnClickListener(v -> {
             // Acciones para el botón de Beneficios de Reciclar
